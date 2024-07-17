@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>My Message Board</title>
+    <link href="/2024/12/14/My-Message-Board/"/>
+    <url>/2024/12/14/My-Message-Board/</url>
+    
+    <content type="html"><![CDATA[<div id="heart-animation" style="text-align: center;">   <span style="font-size: 2em; color: #e25555;">&#x2764;</span>   <div id="confessionCanvasContainer" style="display: none; text-align: center;">    <canvas id="confessionCanvas" width="500" height="300"></canvas>  </div></div><div id="heart-dialogue" style="text-align: center;">   <label for="inputField">Name: </label>  <input type="text" id="inputField" name="inputField">  <button id="openModalBtn">Submit</button></div><div id="heart-message" class="modal">  <div class="modal-content">    <p><span id="modalText"></span></p>    <p><span id="textLine1"></span></p>    <p><span id="textLine2"></span></p>    <p><span id="textLine3"></span></p>  </div></div><style>  @keyframes heartbeat {    0% { transform: scale(1); }    25% { transform: scale(1.2); }    50% { transform: scale(1); }    75% { transform: scale(1.2); }    100% { transform: scale(1); }  }  #heart-animation {    animation: heartbeat 1s infinite;   }</style><style>.modal {  display: none;   position: fixed;  z-index: 1;  left: 0;  top: 0;  width: 100%;  height: 100%;  overflow: auto;  background-color: rgb(0,0,0);  background-color: rgba(0,0,0,0.4);}.modal-content {  background-color: #fefefe;  margin: 15% auto;  padding: 20px;  border: 1px solid #888;  width: 80%;}</style><script>var modal = document.getElementById("heart-message");var btn = document.getElementById("openModalBtn");var modalText = document.getElementById("modalText");var textLine1 = document.getElementById("textLine1");var textLine2 = document.getElementById("textLine2");var textLine3 = document.getElementById("textLine3");var inputField = document.getElementById("inputField");btn.onclick = function() {  var inputValue = inputField.value;  var targetString = "yuqinqin";  modal.style.display = "block";  if (inputValue === targetString) {    modalText.textContent = "Dear " + inputValue + ",";        textLine1.textContent = "You are a kind, sincere, affectionate, thoughtful girl, and I am fascinated by that.";        textLine2.textContent = "Occasionally you will be very sensitive, very angry, even negative, maybe I did not take good care of you.";        textLine3.textContent = "I don't know what the future holds, but I know I can't live without you and I love you.";      } else {    modalText.textContent = "Hello " + inputValue + ",";        textLine1.textContent = "Welcome to my website. From time to time, I will post a few scattered articles here.";        textLine2.textContent = "";        textLine3.textContent = "";  }}window.onclick = function(event) {  if (event.target == modal) {    modal.style.display = "none";  }}</script>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Fluid</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>First Post Page</title>
+    <link href="/2024/06/10/My-First-Post/"/>
+    <url>/2024/06/10/My-First-Post/</url>
+    
+    <content type="html"><![CDATA[<h4 id="本地环境搭建"><a href="#本地环境搭建" class="headerlink" title="本地环境搭建"></a>本地环境搭建</h4><p>本地安装 hexo 静态博客搭建工具：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">npm install hexo-cli -g</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">npm install hexo-deployer-git --save</span><br></code></pre></td></tr></table></figure><p>克隆本静态博客仓库并执行初始化：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> my_blog</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">npm install</span><br></code></pre></td></tr></table></figure><h4 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h4><p> 在 <code>_posts</code> 目录下创建 Markdown 文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo new <span class="hljs-string">&quot;Post Title&quot;</span></span><br></code></pre></td></tr></table></figure><p>生成静态网页并启动本地服务器进行预览：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo g</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo s</span><br></code></pre></td></tr></table></figure><p>清理生成的文件并部署到远程服务器：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo clean</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo deploy</span><br></code></pre></td></tr></table></figure><h4 id="常用文本格式"><a href="#常用文本格式" class="headerlink" title="常用文本格式"></a>常用文本格式</h4><p>无序列表使用 *，-，+ 作为列表标记：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">* 项目1<br>* 项目2<br></code></pre></td></tr></table></figure><p>有序列表使用数据后跟点来创建：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. 第一项<br>2. 第二项<br></code></pre></td></tr></table></figure><p>使用超链接的格式如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">[链接文本](URL)<br></code></pre></td></tr></table></figure><p>插入图片的格式如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">![替代文本](图片URL)<br></code></pre></td></tr></table></figure><p>使用 - [] 和 - [x] 来创建任务列表：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">- [ ] 未完成的任务<br>- [x] 已完成的任务<br></code></pre></td></tr></table></figure><p>这是一段不起眼的文字，这是一个了不起的开始。<br><img src="/image/mountain.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Fluid</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
